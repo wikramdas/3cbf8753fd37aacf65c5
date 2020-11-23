@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Dimensions, Text, View, TextInput, TouchableOpacity, Image, ScrollView } from 'react-native'
+import React, { Component } from 'react';
+import { Dimensions, Image, ScrollView, Text, View } from 'react-native';
 const win = Dimensions.get("window")
 class CapitalWeather extends Component {
     constructor(props) {

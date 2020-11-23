@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import { Dimensions, Text, View, TextInput, TouchableOpacity, Image, ScrollView, FlatList } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { SvgCssUri, SvgUri } from 'react-native-svg';
+import React, { Component } from 'react';
+import { Dimensions, FlatList, Text, TouchableOpacity, View } from 'react-native';
+import { SvgCssUri } from 'react-native-svg';
 const win = Dimensions.get("window")
 class Countries extends Component {
     constructor(props) {
@@ -67,12 +66,11 @@ class Countries extends Component {
                                     backgroundColor: "#1D78E3", borderRadius: 5, marginVertical: 5
                                 }}
                                     onPress={() => this.Submit(item.capital)}>
-                                    <Text style={{ fontSize: 18, color: "#fff", fontWeight: "bold" }}>Capital Weather</Text>
+                                    <Text style={{ fontSize: 18, color: "#fff", fontWeight: "bold", width: '100%', textAlign: "center" }}>Capital Weather</Text>
                                 </TouchableOpacity>
                             </View>
                         )
                     }}
-                    // ListHeaderComponent={() => this.renderHeader()}
                     keyExtractor={(item, index) => index.toString()}
                 />
             </View>

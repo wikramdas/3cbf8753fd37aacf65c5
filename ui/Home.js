@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Dimensions, Text, View, TextInput, TouchableOpacity } from 'react-native'
+import React, { Component } from 'react';
+import { Dimensions, Text, TextInput, TouchableOpacity, View } from 'react-native';
 const win = Dimensions.get("window")
 class Home extends Component {
     constructor(props) {
@@ -34,10 +34,10 @@ class Home extends Component {
                 />
                 <TouchableOpacity activeOpacity={0.9} disabled={this.state.inputText == "" ? true : false} style={{
                     width: "100%", alignItems: "center", justifyContent: "center", padding: 10,
-                    backgroundColor: "#1D78E3", borderRadius: 5
+                    backgroundColor: this.state.inputText == "" ? "#ccc" : "#1D78E3", borderRadius: 5
                 }}
                     onPress={() => this.Submit()}>
-                    <Text style={{ fontSize: 18, color: "white", fontWeight: "bold" }}>SUBMIT</Text>
+                    <Text style={{ fontSize: 18, color: "white", fontWeight: "bold", width: '100%', textAlign: "center" }}>SUBMIT</Text>
                 </TouchableOpacity>
             </View>
         )
